@@ -5,32 +5,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>電卓アプリ</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- 文字で「電卓アプリ」と表示 -->
-    <p>電卓アプリ</p>
-    <input type="text" />
-    <!-- ボタンを0~9まで増やす -->
-    <button onclick="add('1')">1</button>
-    <button onclick="add('2')">2</button>
-    <button onclick="add('3')">3</button>
-    <button onclick="add('4')">4</button>
-    <button onclick="add('5')">5</button>
-    <button onclick="add('6')">6</button>
-    <button onclick="add('7')">7</button>
-    <button onclick="add('8')">8</button>
-    <button onclick="add('9')">9</button>
+    <main>
+        <!-- 文字で「電卓アプリ」と表示 -->
+        <div class="title">
+            <p>電卓アプリ</p>
+        </div>
 
-    <!-- 四則演算、小数点演算、二乗、平方根（ルート）の計算をできるようにする -->
-    <button onclick="add('+')">+</button>
-    <button onclick="add('-')">-</button>
-    <button onclick="add('*')">*</button>
-    <button onclick="add('/')">-</button>
-    <button onclick="add('**')">^</button>
-    <button onclick="add('**0.5')">√</button>
-    <button onclick="cal('=')">=</button>
-    <button onclick="clearInput('')">CLR</button>
+        <div class="cal">
+            <div class="form">
+                <input type="text" />
+            </div>
+            <div class="num">
+                <!-- ボタンを0~9まで増やす -->
+                <button class="grey" onclick="add('1')">1</button>
+                <button class="grey" onclick="add('2')">2</button>
+                <button class="grey" onclick="add('3')">3</button>
+                <button class="grey" onclick="add('4')">4</button>
+                <button class="grey" onclick="add('5')">5</button>
+                <button class="grey" onclick="add('6')">6</button>
+                <button class="grey" onclick="add('7')">7</button>
+                <button class="grey" onclick="add('8')">8</button>
+                <button class="grey" onclick="add('9')">9</button>
+            </div>
+
+            <div class="ope">
+                <!-- 四則演算、小数点演算、二乗、平方根（ルート）の計算をできるようにする -->
+                <button class="orange" onclick="add('+')">+</button>
+                <button class="orange" onclick="add('-')">-</button>
+                <button class="orange" onclick="add('*')">*</button>
+                <button class="orange" onclick="add('/')">/</button>
+                <button class="orange" onclick="add('**')">^</button>
+                <button class="orange" onclick="add('**0.5')">√</button>
+                <button class="orange" onclick="cal('=')">=</button>
+                <button class="orange" onclick="clearInput('')">CLR</button>
+            </div>
+        </div>
+
+    </main>
     <script>
         // inputタグを更新する関数を作る
         function clearInput(v) {
@@ -40,7 +55,7 @@
         //数字を後ろに追加する関数
         function add(v) {
             t = document.querySelector("input").value;
-            if(t=='Error'){
+            if (t == 'Error') {
                 clearInput('');
             }
             document.querySelector("input").value += v;
@@ -51,7 +66,7 @@
             try {
                 ans = document.querySelector("input");
                 ans.value = eval(ans.value);
-            } catch (_error) {　
+            } catch (_error) {
                 clearInput('Error');
             }
         }

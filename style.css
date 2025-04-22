@@ -1,0 +1,83 @@
+/* 全体の背景と文字の調整 */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #fff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* メインコンテナ */
+  main {
+    background-color: #1e1e2f;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    width: 320px;
+  }
+  
+  /* タイトル部分 */
+  .title p {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  /* 入力欄 */
+  input {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* ボタンの共通スタイル */
+  button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 35px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  /* 数字ボタン */
+  .grey {
+    background-color: #505050;
+    color: white;
+  }
+  
+  /* 演算ボタン */
+  .orange {
+    background-color: #ff9500;
+    color: white;
+  }
+  
+  /* ボタン配置用グリッド */
+  .cal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* 入力欄のラッパー */
+  .form {
+    margin-bottom: 10px;
+  }
+  
+  /* ボタン配置の調整 */
+  .num, .ope {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
